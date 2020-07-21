@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-left: 100px;
-  padding-right: 100px;
+  padding-right: 60px;
   padding-top: 60px;
   margin-bottom: 20px;
 }
@@ -20,6 +20,8 @@ body {
 .main-header {
   text-align: center;
   margin-top: 30px;
+  position: fixed;
+  right: 40%;
 }
 
 .m-menu-button {
@@ -94,8 +96,56 @@ body {
   letter-spacing: 0.05em;
 }
 
-.search-icon {
+.search-block {
+  display: none;
+}
+
+.search-input {
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  padding-left: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px 0px 0px 2px;
+}
+
+.search-button {
+  width: 60px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
   cursor: pointer;
+}
+
+.search-button.search {
+  background: #15DAB7;
+  border: 1px solid #15DAB7;
+  border-radius: 0px 2px 2px 0px;
+  margin-right: 10px;
+}
+
+.search-button.filter {
+  background: #EF997F;
+  border: 1px solid #EF997F;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+.close {
+  width: 15px;
+  cursor: pointer;
+}
+
+.search-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.search-visible {
+  display: flex;
 }
 
 .main {
@@ -255,6 +305,10 @@ body {
     margin-bottom: 20px;
   }
 
+  .main-header {
+    right: 34%;
+  }
+
   .footer-button {
     font-size: 16px;
     padding: 10px 20px;
@@ -271,7 +325,7 @@ body {
   }
 
   .navigation-link:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 12px;
   }
 
   .nav-link-icon {
@@ -284,6 +338,22 @@ body {
 
   .manage-link {
     font-size: 14px;
+  }
+
+  .search-input {
+    font-size: 10px;
+    width: 50%;
+  }
+
+  .search-button {
+    width: 60px;
+    font-size: 10px;
+    line-height: 12px;
+    width: 30%;
+  }
+
+  .search-button.search {
+    margin-right: 8px;
   }
 
   .main-title {
@@ -341,6 +411,31 @@ body {
 
   .logo {
     margin-right: 20px;
+  }
+
+  .search-block {
+    display: none;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-button {
+    width: 30%;
+    height: 22px;
+  }
+
+  .search-button.filter {
+    background: #EF997F;
+    border: 1px solid #EF997F;
+    border-radius: 2px;
+  }
+
+  .close {
+    width: 11px;
+    height: 11px;
   }
 
   .card {
