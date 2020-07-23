@@ -48,7 +48,7 @@ $(document).ready(function () {
     $('.main-header').toggleClass('is-open-mobile-menu');
     $('body').toggleClass('no-scroll');
     blockSearch.hide();
-    iconSearch.show();
+    iconSearch.toggleClass('search-visible');
   });
   bHideMenu.on("click", function() {
     $('.main-header').toggleClass('animate__lightSpeedOutRight');
