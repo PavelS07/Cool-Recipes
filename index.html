@@ -43,7 +43,7 @@
       <div class="search-block animate__animated animate__bounceInDown">
         <input type="text" class="search-input" placeholder="Поиск...">
         <button class="search-button search">Найти</button>
-        <button class="search-button filter">Фильтр</button>
+        <button class="search-button filter submit-filter">Фильтр</button>
         <img src="img/close.svg" alt="" class="close">
       </div>
     </div>
@@ -181,6 +181,91 @@
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
+  <div class="modal animate__animated animate__fadeIn">
+    <div class="modal-dialog-search">
+      <img src="img/close.svg" alt="" class="modal-close">
+        <div class="modal-row">
+          <span class="modal-text">Категория</span>
+          <select class="modal-select">
+            <option class="modal-select-text">Категория</option>
+            <option class="modal-select-text">Жаркое</option>
+            <option class="modal-select-text">Фрукты</option>
+            <option class="modal-select-text">Овощи</option>
+            <option class="modal-select-text">Мороженое</option>
+          </select>
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Ингредиенты</span>
+          <button class="search-button filter search-button-modal button-choose-ingredients">Выбрать</button>
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Время приготовления</span>
+          <span class="input-text-ingredients">от</span>
+          <input type="text" class="modal-input-ingredients">
+          <span class="input-text-ingredients">до</span>
+          <input type="text" class="modal-input-ingredients">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Желаемое</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+      <button class="search-button search search-button-modal button-center">Найти</button>
+    </div>
+    <!-- /.modal-dialog-search -->
+    <div class="modal-choose-ingredients">
+      <div class="modal-dialog-ingredients">
+        <img src="img/close.svg" alt="" class="modal-close modal-close-choose-ingredients">
+        <div class="modal-row">
+          <span class="modal-text">Свинина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Говядина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Сыр моцарелла</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Макароны</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Свинина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Говядина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Сыр моцарелла</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Макароны</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <button class="search-button search search-button-modal button-center">Ок</button>
+      </div>
+      <!-- /.modal-dialog-ingredients -->
+    </div>
+    <!-- /.modal-choose-ingredients -->
+  </div>
+  <!-- /.modal -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </body>
