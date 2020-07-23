@@ -100,7 +100,8 @@ body {
   display: none;
 }
 
-.search-input {
+.search-input,
+.recalculation-input {
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.06em;
@@ -174,8 +175,6 @@ body {
 }
 
 .card {
-  /* width: 345px;
-  height: 250px; */
   flex-basis: 25%;
   border: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 4px;
@@ -388,6 +387,126 @@ body {
   overflow: hidden;
 }
 
+.container-recipe-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.recipe-main-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.recipe-button, .recalculation-ingredients-button {
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding: 6px 10px;
+  border-radius: 3px;
+  opacity: 0.62;
+  cursor: pointer;
+}
+
+.recipe-button.edit {
+  margin-right: 30px;
+  background: #413731;
+  border: 1px solid #413731;
+}
+
+.recipe-button.delete, .recalculation-ingredients-button.minus {
+  background: #E55A30;
+  border: 1px solid #E55A30;
+}
+
+.pre-description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pre-description-image {
+  width: 636px;
+  height: 413px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.row-text-category {
+  margin-top: 0px;
+}
+
+.row-text {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+}
+
+.row-dynamics-ingredients-text {
+  display: block;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-description {
+  margin-bottom: 30px;
+}
+
+.recipe-text-description {
+  width: 1000px;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+  margin-left: 10px;
+}
+
+.recalculation-ingredients-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.recalculation-ingredients-paragraph {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+  margin-left: 10px;
+}
+
+.recalculation-row {
+  margin-bottom: 20px;
+}
+
+.recalculation-row-text {
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+}
+
+.recalculation-input {
+  border-radius: 3px;
+  padding: 0;
+  width: 40px;
+  height: 26px;
+}
+
+.recalculation-ingredients-buttons {
+  display: flex;
+  margin: 10px;
+}
+
+.recalculation-ingredients-button.plus {
+  background: #4992FF;
+  border: 1px solid #4992FF;
+  margin-left: 20px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -407,6 +526,11 @@ body {
   .footer-button {
     font-size: 16px;
     padding: 10px 20px;
+  }
+
+  .pre-description-image {
+    width: 560px;
+    height: 400px;
   }
 }
 
@@ -468,6 +592,19 @@ body {
     margin: auto;
     margin-bottom: 20px;
   }
+
+  .pre-description-image {
+    width: 400px;
+    height: 350px;
+  }
+
+  .recipe-text-description {
+    width: 90%;
+  }
+  
+  .row-text {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -490,6 +627,7 @@ body {
     height: 100%;
     background: #8BB8FC;
     margin: auto;
+    z-index: 99;
   }
 
   .is-open-mobile-menu {
@@ -556,6 +694,39 @@ body {
     font-size: 14px;
   }
 
+  .recipe-button.edit {
+    margin-right: 15px;
+  }
+
+  .recipe-button, .recalculation-ingredients-button {
+    font-size: 14px;
+  }
+
+  .pre-description-image {
+    width: 60%;
+    height: 70%;
+  }
+
+  .row-text {
+    font-size: 16px;
+  }
+
+  .row-dynamics-text {
+    display: block;
+  }
+
+  .row-dynamics-ingredients-text {
+    font-size: 14px;
+  }
+
+  .recipe-text-description {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .recalculation-ingredients-paragraph {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -646,5 +817,45 @@ body {
   .modal-dialog-search,
   .modal-dialog-ingredients {
     width: 300px;
+  }
+
+  .recipe-main-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .recipe-button, .recalculation-ingredients-button {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .pre-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .row-dynamics-text {
+    display: inline;
+  }
+
+  .pre-description-image {
+    order: -1;
+    margin-bottom: 20px;
+    width: 95%;
+    height: 95%;
+  }
+
+  .recipe-text-description {
+    width: 95%;
+  }
+
+  .recalculation-input {
+    width: 40px;
+    height: 20px;
   }
 }

@@ -47,8 +47,6 @@ $(document).ready(function () {
   bMobileMenu.on("click", function() {
     $('.main-header').toggleClass('is-open-mobile-menu');
     $('body').toggleClass('no-scroll');
-    blockSearch.hide();
-    iconSearch.addClass('search-visible');
   });
   bHideMenu.on("click", function() {
     $('.main-header').toggleClass('animate__lightSpeedOutRight');
