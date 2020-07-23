@@ -6,6 +6,8 @@ $(document).ready(function () {
   const bCloseModal = $('.modal-close');
   const bChooseIngredients = $('.button-choose-ingredients');
   const bCloseModalChooseIngredients = $('.modal-close-choose-ingredients');
+  const bMobileMenu = $('.m-menu-button');
+  const bHideMenu = $('.mobile-hide');
   let width = $(window).width(); 
 
   iconSearch.on("click", function() {
@@ -42,6 +44,19 @@ $(document).ready(function () {
     $('.modal-choose-ingredients').toggleClass('is-open-modal');
     $('.modal').toggleClass('is-open-modal');
   });
+  bMobileMenu.on("click", function() {
+    $('.main-header').toggleClass('is-open-mobile-menu');
+    $('body').toggleClass('no-scroll');
+  });
+  bHideMenu.on("click", function() {
+    $('.main-header').toggleClass('animate__lightSpeedOutRight');
+    setTimeout(function(){
+      $('.main-header').toggleClass('animate__lightSpeedOutRight');
+      $('.main-header').toggleClass('is-open-mobile-menu');
+      $('body').toggleClass('no-scroll');
+    }, 1000);
+  });
+  
   
 
 
