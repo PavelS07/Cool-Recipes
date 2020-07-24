@@ -839,6 +839,10 @@ body {
     margin-bottom: 20px;
   }
 
+  .pre-description-text {
+    margin-right: auto;
+  }
+
   .row-dynamics-text {
     display: inline;
   }
