@@ -9,9 +9,13 @@ $(document).ready(function () {
   const bMobileMenu = $('.m-menu-button');
   const bHideMenu = $('.mobile-hide');
   const bAddRecipe = $('.plus');
+  const bMinusIngredient = $('.minus');
   const bCloseModalAddIngredients = $('.modal-close-add-ingredients');
   // const bAddIngredient = $('.add-ingredient-image');
   const htmlAddIngredientBlock = "<div class='add-ingredients-inputs animate__animated animate__fadeInDown'> <input type='text' class='add-ingredients-input' placeholder='Название'> <input type='text' class='add-ingredients-input' placeholder='Масса'> <img src='img/add-ingredint.svg' alt='Добавить ингредиент' class='add-ingredient-image'></div>";
+  const bDeleteRecipe = $('.delete');
+  const bCloseModalDeleteRecipe = $('.delete-recipe-button-no');
+  const bCrossOut = $('.cross-out-product-button');
   let width = $(window).width();
 
   iconSearch.on("click", function () {
@@ -70,10 +74,29 @@ $(document).ready(function () {
     $(this).toggleClass('add-ingredient-image-hide');
     $('.add-ingredient-input-content').append(htmlAddIngredientBlock);
   });
-
-
+  
   $('.add-ingredient-input-content').delegate('.add-ingredient-image-hide', 'click', function () {
     $(this).parent('.add-ingredients-inputs').toggleClass('add-ingredient-input-hide');
   });
   // Блок с добавлением ингредиентов РЕФАКТОРИНГ
+
+  bDeleteRecipe.on("click", function () {
+    $('.modal-delete-recipe').toggleClass('is-open-modal');
+  });
+  bCloseModalDeleteRecipe.on("click", function () {
+    $('.modal-delete-recipe').toggleClass('is-open-modal');
+  });
+  bMinusIngredient.on("click", function () {
+    $('.delete-ingredient-in-recalculation-row-text').toggleClass('is-visible-delete-ingredient-in-recalculation-row-text');
+  });
+  $('.recalculation-row').delegate('.delete-ingredient-in-recalculation-row-text', 'click', function () {
+    $(this).parent('.recalculation-row').hide();
+  });
+  $('.list-products-function').delegate(bCrossOut, 'click', function () {
+    $(this).parent('.recalculation-row').hide();
+    $('.hint-cross-out-product').toggleClass('is-open-list-products');
+    $('.name-product').toggleClass('pre-cross-out-product');
+    // Написать зачеркивание продуктов, с классами .cross-out-product, ИЗМЕНЯТЬ вид кнопки зачеркивания "Зачеркнуть" <==> "Готово"
+  });
+
 });

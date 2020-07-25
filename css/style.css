@@ -101,7 +101,8 @@ body {
 }
 
 .search-input,
-.recalculation-input {
+.recalculation-input,
+.add-product-input {
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.06em;
@@ -154,6 +155,8 @@ body {
 
 .main {
   margin-bottom: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .container {
@@ -307,7 +310,8 @@ body {
 }
 
 .modal-dialog-search,
-.modal-dialog-ingredients {
+.modal-dialog-ingredients,
+.modal-dialog-delete-recipe {
   width: 350px;
   background: #FFFFFF;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
@@ -370,7 +374,8 @@ body {
   line-height: 14px;
 }
 
-.modal-close, .modal-close-add-ingredients {
+.modal-close,
+.modal-close-add-ingredients {
   position: relative;
   top: 0px;
   right: -98%;
@@ -386,11 +391,6 @@ body {
   overflow: hidden;
 }
 
-.container-recipe-wrapper {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .recipe-main-title {
   display: flex;
   align-items: center;
@@ -399,7 +399,9 @@ body {
 }
 
 .recipe-button,
-.recalculation-ingredients-button {
+.recalculation-ingredients-button,
+.delete-recipe-button,
+.add-products-button {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
@@ -497,6 +499,17 @@ body {
   height: 26px;
 }
 
+.delete-ingredient-in-recalculation-row-text {
+  width: 15px;
+  height: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.is-visible-delete-ingredient-in-recalculation-row-text {
+  display: inline;
+}
+
 .recalculation-ingredients-buttons {
   display: flex;
   margin: 10px;
@@ -505,6 +518,12 @@ body {
 .recalculation-ingredients-button.plus {
   background: #4992FF;
   border: 1px solid #4992FF;
+  margin-left: 20px;
+}
+
+.recalculation-ingredients-button.calculate-ingredients {
+  background: #15DAB7;
+  border: 1px solid #15DAB7;
   margin-left: 20px;
 }
 
@@ -540,7 +559,8 @@ body {
   padding-left: 10px;
 }
 
-.add-ingredient-image, .add-ingredient-image-hide {
+.add-ingredient-image,
+.add-ingredient-image-hide {
   cursor: pointer;
 }
 
@@ -548,12 +568,128 @@ body {
   transform: rotate(45deg);
 }
 
+.add-ingredient-input-hide {
+  display: none;
+}
+
+.modal-delete-recipe {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-dialog-delete-recipe {
+  padding: 0;
+}
+
+.delete-recipe-heading {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.085em;
+  width: 100%;
+  text-align: center;
+}
+
+.delete-recipe-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.delete-recipe-button-no {
+  background: #4992FF;
+  border: 1px solid #4992FF;
+}
+
+.delete-recipe-button-yes {
+  background: #E55A30;
+  border: 1px solid #E55A30;
+  margin-left: 40px;
+}
+
 .is-open-modal {
   display: flex;
 }
 
-.add-ingredient-input-hide {
+.list-products-block {
+  margin-bottom: 25px;
+}
+
+.name-product {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-products-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.add-product-button,
+.clear-product-button {
+  background: #4992FF;
+  border: 1px solid #4992FF;
+  margin-right: 20px;
+  width: 100px;
+  display: block;
+}
+
+.cross-out-product-button {
+  background: #E55A30;
+  border: 1px solid #E55A30;
+  display: block;
+  margin-bottom: 15px;
+  width: 100px;
+  padding: 6px 3px;
+}
+
+.cross-out-success-product-button {
+  background: #15DAB7;
+  border: 1px solid #15DAB7;
+}
+
+.clear-product-button {
+  display: block;
+}
+
+.add-product-input {
+  border-radius: 3px;
+  width: 150px;
+  margin-right: 20px;
+}
+
+.add-product-input-quantity {
+  width: 100px;
+  margin: 0;
+}
+
+.hint-cross-out-product {
+  margin-bottom: 10px;
+  font-weight: 700;
   display: none;
+}
+
+.pre-cross-out-product {
+  opacity: 30%;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cross-out-product {
+  text-decoration-line: line-through;
+  color: #EF997F;
+  opacity: 70%;
+}
+
+.is-open-list-products {
+  display: flex;
 }
 
 @media (max-width: 1200px) {
@@ -748,7 +884,8 @@ body {
   }
 
   .recipe-button,
-  .recalculation-ingredients-button {
+  .recalculation-ingredients-button,
+  .add-products-button {
     font-size: 14px;
   }
 
@@ -781,6 +918,22 @@ body {
   .add-ingredients-heading {
     font-size: 14px;
     letter-spacing: 0.085em;
+  }
+
+  .add-products-block {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+
+  .add-product-input {
+    width: 50%;
+    margin-bottom: 5px;
+  }
+
+  .add-product-button {
+    order: 1;
   }
 }
 
@@ -870,7 +1023,8 @@ body {
   }
 
   .modal-dialog-search,
-  .modal-dialog-ingredients {
+  .modal-dialog-ingredients,
+  .modal-dialog-delete-recipe {
     width: 300px;
   }
 
@@ -883,7 +1037,8 @@ body {
   }
 
   .recipe-button,
-  .recalculation-ingredients-button {
+  .recalculation-ingredients-button,
+  .add-products-button {
     padding: 5px;
     font-size: 12px;
   }

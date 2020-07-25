@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
+  <title>Мясо по-французски</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
@@ -22,7 +22,7 @@
               src="img/nav-link-1.svg" alt="" class="nav-link-icon"></span></a>
         <a href="#" class="navigation-link animate__animated animate__lightSpeedInLeft">Мои рецепты <span><img
               src="img/nav-link-2.svg" alt="" class="nav-link-icon"></span></a>
-        <a href="#" class="navigation-link animate__animated animate__zoomInUp">Мои покупки <span><img
+        <a href="products.html" class="navigation-link animate__animated animate__zoomInUp">Мои покупки <span><img
               src="img/nav-link-3.svg" alt="" class="nav-link-icon"></span></a>
       </nav>
       <span class="mobile-hide">Скрыть меню</span>
@@ -50,7 +50,7 @@
     </div>
   </header>
   <section class="main">
-    <div class="container container-recipe-wrapper">
+    <div class="container">
       <div class="recipe-main-title">
         <h2 class="main-title">Мясо по-французски</h2>
         <div class="recipe-buttons">
@@ -105,28 +105,33 @@
         <p class="recalculation-ingredients-paragraph">Введите количество ингредиентов на одну порцию:</p>
         <div class="recalculation-ingredients-wrapper">
           <div class="recalculation-row">
-            <span class="recalculation-row-text">Свинина</span>
+            <span class="recalculation-row-text">Свинина - <span class="ingredint-quantity">12</span></span>
             <input type="text" class="recalculation-input">
+            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
           </div>
           <!-- /.recalculation-row -->
           <div class="recalculation-row">
-            <span class="recalculation-row-text">Шампиньоны</span>
+            <span class="recalculation-row-text">Шампиньоны - <span class="ingredint-quantity">12</span></span>
             <input type="text" class="recalculation-input">
+            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
           </div>
           <!-- /.recalculation-row -->
           <div class="recalculation-row">
-            <span class="recalculation-row-text">Лук репчатый</span>
+            <span class="recalculation-row-text">Лук репчатый - <span class="ingredint-quantity">12</span></span>
             <input type="text" class="recalculation-input">
+            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
           </div>
           <!-- /.recalculation-row -->
           <div class="recalculation-row">
-            <span class="recalculation-row-text">Сыр твердый</span>
+            <span class="recalculation-row-text">Сыр твердый - <span class="ingredint-quantity">12</span></span>
             <input type="text" class="recalculation-input">
+            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
           </div>
           <!-- /.recalculation-row -->
           <div class="recalculation-row">
-            <span class="recalculation-row-text">Помидоры красные</span>
+            <span class="recalculation-row-text">Помидоры красные - <span class="ingredint-quantity">12</span></span>
             <input type="text" class="recalculation-input">
+            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
           </div>
           <!-- /.recalculation-row -->
         </div>
@@ -134,6 +139,7 @@
         <div class="recalculation-ingredients-buttons">
           <button class="recalculation-ingredients-button minus">Убавить</button>
           <button class="recalculation-ingredients-button plus">Добавить</button>
+          <button class="recalculation-ingredients-button calculate-ingredients">Пересчитать</button>
         </div>
       </div>
       <!-- /.recalculation-ingredients -->
@@ -255,6 +261,17 @@
     <!-- /.modal-dialog-ingredients -->
   </div>
   <!-- /.modal-add-ingredients -->
+  <div class="modal-delete-recipe animate__animated animate__fadeIn">
+    <div class="modal-dialog-delete-recipe">
+      <h4 class="delete-recipe-heading">Удалить рецепт ”Мясо по французски”?</h4>
+      <div class="delete-recipe-buttons">
+        <button class="delete-recipe-button delete-recipe-button-no">Нет</button>  
+        <button class="delete-recipe-button delete-recipe-button-yes">Да</button>  
+      </div>
+    </div>
+    <!-- /.modal-dialog-delete-recipe -->
+  </div>
+  <!-- /.modal-delete-recipe -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </body>

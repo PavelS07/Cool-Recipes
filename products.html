@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список продуктов</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <a href="#"><img src="img/Logo.png" alt="Logo: cool recipe" class="logo"></a>
+    <div class="main-header animate__animated">
+      <img src="img/Cool Recipes.png" alt="" class="site-name">
+      <nav class="navigation">
+        <a href="#" class="navigation-link animate__animated animate__lightSpeedInRight">Мои категории <span><img
+              src="img/nav-link-1.svg" alt="" class="nav-link-icon"></span></a>
+        <a href="#" class="navigation-link animate__animated animate__lightSpeedInLeft">Мои рецепты <span><img
+              src="img/nav-link-2.svg" alt="" class="nav-link-icon"></span></a>
+        <a href="products.html" class="navigation-link animate__animated animate__zoomInUp">Мои покупки <span><img
+              src="img/nav-link-3.svg" alt="" class="nav-link-icon"></span></a>
+      </nav>
+      <span class="mobile-hide">Скрыть меню</span>
+    </div>
+    <button class="m-menu-button">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    <div class="manage-header">
+      <p class="user-name">Дарья <span><img src="img/noto_face-savoring-food.svg" alt="" class="user-name-icon"></span>
+      </p>
+      <ul class="manage-list">
+        <li><a href="#" class="manage-link">Добавить категорию</a></li>
+        <li><a href="#" class="manage-link">Добавить рецепт</a></li>
+        <li><a href="#" class="manage-link">Добавить список продуктов</a> </li>
+      </ul>
+      <img src="img/search-icon.svg" alt="search" class="search-icon search-visible">
+      <div class="search-block animate__animated animate__bounceInDown">
+        <input type="text" class="search-input" placeholder="Поиск...">
+        <button class="search-button search">Найти</button>
+        <button class="search-button filter submit-filter">Фильтр</button>
+        <img src="img/close.svg" alt="" class="close">
+      </div>
+    </div>
+  </header>
+  <section class="main">
+    <div class="container">
+      <div class="recipe-main-title">
+        <h2 class="main-title">Список продуктов</h2>
+      </div>
+      <!-- /.recipe-main-title -->
+      <div class="list-products-wrapper">
+        <span class="hint-cross-out-product animate__animated animate__slideInDown">Щелкните на продукты, которые уже купили!</span>  
+        <div class="list-products-block">
+          <span class="name-product">Свинина- <span class="name-product-quantity">1 кг</span><span>;</span></span> 
+          <span class="name-product">Шампиньоны - <span class="name-product-quantity">1 кг</span><span>;</span></span>
+          <span class="name-product">Лук репчатый - <span class="name-product-quantity">2 шт</span><span>;</span></span>
+          <span class="name-product">Сыр твердый - <span class="name-product-quantity">100 гр</span><span>;</span></span>
+          <span class="name-product">Помидоры красные - <span class="name-product-quantity">2шт</span><span>;</span></span>
+          <span class="name-product">Свинина - <span class="name-product-quantity">1 кг</span><span>;</span></span>
+          <span class="name-product">Шампиньоны - <span class="name-product-quantity">1 кг</span><span>;</span></span>
+          <span class="name-product">Лук репчатый - <span class="name-product-quantity">2 шт</span><span>;</span></span>
+          <span class="name-product">Сыр твердый - <span class="name-product-quantity">100 гр</span><span>;</span></span>
+          <span class="name-product">Помидоры красные - <span class="name-product-quantity">2шт</span><span>;</span></span>
+        </div>
+        <!-- /.list-products-block -->
+        <div class="list-products-function">
+          <div class="add-products-block">
+            <button class="add-products-button add-product-button">Добавить</button>
+            <input type="text" class="add-product-input" placeholder="Название продукта">
+            <input type="text" class="add-product-input add-product-input-quantity" placeholder="Количество">
+          </div>
+          <!-- /.add-products-block -->
+          <button class="add-products-button cross-out-product-button">Зачеркнуть</button>
+          <button class="add-products-button clear-product-button">Очистить</button>
+        </div>
+        <!-- /.list-products-function -->
+      </div>
+      <!-- /.list-products-wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.main -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <button class="footer-button setting-button">Настройки</button>
+        <button class="footer-button exit-button">Выйти</button>
+      </div>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
+  <div class="modal animate__animated animate__fadeIn">
+    <div class="modal-dialog-search">
+      <img src="img/close.svg" alt="" class="modal-close">
+      <div class="modal-row">
+        <span class="modal-text">Категория</span>
+        <select class="modal-select">
+          <option class="modal-select-text">Категория</option>
+          <option class="modal-select-text">Жаркое</option>
+          <option class="modal-select-text">Фрукты</option>
+          <option class="modal-select-text">Овощи</option>
+          <option class="modal-select-text">Мороженое</option>
+        </select>
+      </div>
+      <!-- /.modal-row -->
+      <div class="modal-row">
+        <span class="modal-text">Ингредиенты</span>
+        <button class="search-button filter search-button-modal button-choose-ingredients">Выбрать</button>
+      </div>
+      <!-- /.modal-row -->
+      <div class="modal-row">
+        <span class="modal-text">Время приготовления</span>
+        <span class="input-text-ingredients">от</span>
+        <input type="text" class="modal-input-ingredients">
+        <span class="input-text-ingredients">до</span>
+        <input type="text" class="modal-input-ingredients">
+      </div>
+      <!-- /.modal-row -->
+      <div class="modal-row">
+        <span class="modal-text">Желаемое</span>
+        <input type="checkbox" class="modal-checkbox">
+      </div>
+      <!-- /.modal-row -->
+      <button class="search-button search search-button-modal button-center">Найти</button>
+    </div>
+    <!-- /.modal-dialog-search -->
+    <div class="modal-choose-ingredients">
+      <div class="modal-dialog-ingredients">
+        <img src="img/close.svg" alt="" class="modal-close modal-close-choose-ingredients">
+        <div class="modal-row">
+          <span class="modal-text">Свинина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Говядина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Сыр моцарелла</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Макароны</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Свинина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Говядина</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Сыр моцарелла</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <div class="modal-row">
+          <span class="modal-text">Макароны</span>
+          <input type="checkbox" class="modal-checkbox">
+        </div>
+        <!-- /.modal-row -->
+        <button class="search-button search search-button-modal button-center">Готово</button>
+      </div>
+      <!-- /.modal-dialog-ingredients -->
+    </div>
+    <!-- /.modal-choose-ingredients -->
+  </div>
+  <!-- /.modal -->  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
