@@ -137,7 +137,8 @@ body {
 }
 
 .close,
-.modal-close {
+.modal-close,
+.modal-close-add-ingredients {
   width: 15px;
   cursor: pointer;
 }
@@ -360,7 +361,8 @@ body {
   margin-left: 3px;
 }
 
-.modal-input-ingredients {
+.modal-input-ingredients,
+.add-ingredients-input {
   width: 25px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 3px;
@@ -368,16 +370,13 @@ body {
   line-height: 14px;
 }
 
-.modal-close {
+.modal-close, .modal-close-add-ingredients {
   position: relative;
   top: 0px;
   right: -98%;
   margin-bottom: 10px;
 }
 
-.is-open-modal {
-  display: flex;
-}
 
 .mobile-hide {
   display: none;
@@ -399,7 +398,8 @@ body {
   margin-bottom: 20px;
 }
 
-.recipe-button, .recalculation-ingredients-button {
+.recipe-button,
+.recalculation-ingredients-button {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
@@ -415,7 +415,8 @@ body {
   border: 1px solid #413731;
 }
 
-.recipe-button.delete, .recalculation-ingredients-button.minus {
+.recipe-button.delete,
+.recalculation-ingredients-button.minus {
   background: #E55A30;
   border: 1px solid #E55A30;
 }
@@ -505,6 +506,54 @@ body {
   background: #4992FF;
   border: 1px solid #4992FF;
   margin-left: 20px;
+}
+
+.modal-add-ingredients {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  overflow: auto;
+}
+
+.add-ingredients-heading {
+  margin-top: 0px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.085em;
+}
+
+.add-ingredients-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-ingredients-input {
+  width: 40%;
+  font-size: 16px;
+  line-height: 16px;
+  padding-left: 10px;
+}
+
+.add-ingredient-image, .add-ingredient-image-hide {
+  cursor: pointer;
+}
+
+.add-ingredient-image-hide {
+  transform: rotate(45deg);
+}
+
+.is-open-modal {
+  display: flex;
+}
+
+.add-ingredient-input-hide {
+  display: none;
 }
 
 @media (max-width: 1200px) {
@@ -601,7 +650,7 @@ body {
   .recipe-text-description {
     width: 90%;
   }
-  
+
   .row-text {
     font-size: 18px;
   }
@@ -698,7 +747,8 @@ body {
     margin-right: 15px;
   }
 
-  .recipe-button, .recalculation-ingredients-button {
+  .recipe-button,
+  .recalculation-ingredients-button {
     font-size: 14px;
   }
 
@@ -726,6 +776,11 @@ body {
 
   .recalculation-ingredients-paragraph {
     font-size: 14px;
+  }
+
+  .add-ingredients-heading {
+    font-size: 14px;
+    letter-spacing: 0.085em;
   }
 }
 
@@ -827,7 +882,8 @@ body {
     margin-bottom: 20px;
   }
 
-  .recipe-button, .recalculation-ingredients-button {
+  .recipe-button,
+  .recalculation-ingredients-button {
     padding: 5px;
     font-size: 12px;
   }
