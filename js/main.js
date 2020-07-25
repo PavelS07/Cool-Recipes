@@ -15,7 +15,7 @@ $(document).ready(function () {
   const htmlAddIngredientBlock = "<div class='add-ingredients-inputs animate__animated animate__fadeInDown'> <input type='text' class='add-ingredients-input' placeholder='Название'> <input type='text' class='add-ingredients-input' placeholder='Масса'> <img src='img/add-ingredint.svg' alt='Добавить ингредиент' class='add-ingredient-image'></div>";
   const bDeleteRecipe = $('.delete');
   const bCloseModalDeleteRecipe = $('.delete-recipe-button-no');
-  const bCrossOut = $('.cross-out-product-button');
+  const bClearListProducts = $('.clear-product-button');
   let width = $(window).width();
 
   iconSearch.on("click", function () {
@@ -92,11 +92,30 @@ $(document).ready(function () {
   $('.recalculation-row').delegate('.delete-ingredient-in-recalculation-row-text', 'click', function () {
     $(this).parent('.recalculation-row').hide();
   });
-  $('.list-products-function').delegate(bCrossOut, 'click', function () {
-    $(this).parent('.recalculation-row').hide();
+  $('.list-products-function').delegate('.cross-out-product-button', 'click', function () {
+    $(this).removeClass('cross-out-product-button');
+    $(this).text('Готово');      
+    $(this).toggleClass('cross-out-success-product-button');                                                  
+    // $(this).parent('.recalculation-row').hide();
     $('.hint-cross-out-product').toggleClass('is-open-list-products');
     $('.name-product').toggleClass('pre-cross-out-product');
-    // Написать зачеркивание продуктов, с классами .cross-out-product, ИЗМЕНЯТЬ вид кнопки зачеркивания "Зачеркнуть" <==> "Готово"
+    // Меняем кнопку на "Готово"
+  });
+
+  $('.list-products-function').delegate('.cross-out-success-product-button', 'click', function () {
+    $(this).removeClass('cross-out-success-product-button');
+    $(this).text('Зачеркнуть');      
+    $(this).toggleClass('cross-out-product-button');                                                  
+    $('.hint-cross-out-product').toggleClass('is-open-list-products');
+    $('.name-product').toggleClass('pre-cross-out-product');
+    // Меняем кнопку на "Зачеркивание"
+  });
+
+  $('.list-products-block').delegate('.pre-cross-out-product', 'click', function () {
+    $(this).toggleClass('cross-out-product');     
+  });
+  bClearListProducts.on("click", function () {
+    $('.list-products-block').text('');
   });
 
 });

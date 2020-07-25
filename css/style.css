@@ -641,7 +641,7 @@ body {
   display: block;
 }
 
-.cross-out-product-button {
+.cross-out-product-button, .cross-out-success-product-button {
   background: #E55A30;
   border: 1px solid #E55A30;
   display: block;
