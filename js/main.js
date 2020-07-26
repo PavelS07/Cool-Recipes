@@ -16,6 +16,7 @@ $(document).ready(function () {
   const bDeleteRecipe = $('.delete');
   const bCloseModalDeleteRecipe = $('.delete-recipe-button-no');
   const bClearListProducts = $('.clear-product-button');
+  const bAddProductInList = $('.add-product-button');
   let width = $(window).width();
 
   iconSearch.on("click", function () {
@@ -37,6 +38,15 @@ $(document).ready(function () {
       blockSearch.removeClass('search-visible');
     }
   });
+
+  // Скрываем меню при нажатии на любую ссылку в версиях шириной <=768 ВОЗМОЖЕН РЕФАКТОРИНГ
+  if (width <=768) {
+    $('.navigation-link').on("click", function () {
+      $('.main-header').toggleClass('is-open-mobile-menu');
+    });
+  }
+  // Скрываем меню при нажатии на любую ссылку в версиях шириной <=768
+
   filterButton.on("click", function () {
     $('.modal').toggleClass('is-open-modal');
   });
@@ -74,7 +84,7 @@ $(document).ready(function () {
     $(this).toggleClass('add-ingredient-image-hide');
     $('.add-ingredient-input-content').append(htmlAddIngredientBlock);
   });
-  
+
   $('.add-ingredient-input-content').delegate('.add-ingredient-image-hide', 'click', function () {
     $(this).parent('.add-ingredients-inputs').toggleClass('add-ingredient-input-hide');
   });
@@ -94,8 +104,8 @@ $(document).ready(function () {
   });
   $('.list-products-function').delegate('.cross-out-product-button', 'click', function () {
     $(this).removeClass('cross-out-product-button');
-    $(this).text('Готово');      
-    $(this).toggleClass('cross-out-success-product-button');                                                  
+    $(this).text('Готово');
+    $(this).toggleClass('cross-out-success-product-button');
     // $(this).parent('.recalculation-row').hide();
     $('.hint-cross-out-product').toggleClass('is-open-list-products');
     $('.name-product').toggleClass('pre-cross-out-product');
@@ -104,18 +114,38 @@ $(document).ready(function () {
 
   $('.list-products-function').delegate('.cross-out-success-product-button', 'click', function () {
     $(this).removeClass('cross-out-success-product-button');
-    $(this).text('Зачеркнуть');      
-    $(this).toggleClass('cross-out-product-button');                                                  
+    $(this).text('Зачеркнуть');
+    $(this).toggleClass('cross-out-product-button');
     $('.hint-cross-out-product').toggleClass('is-open-list-products');
     $('.name-product').toggleClass('pre-cross-out-product');
     // Меняем кнопку на "Зачеркивание"
   });
 
   $('.list-products-block').delegate('.pre-cross-out-product', 'click', function () {
-    $(this).toggleClass('cross-out-product');     
+    $(this).toggleClass('cross-out-product');
   });
   bClearListProducts.on("click", function () {
-    $('.list-products-block').text('');
+    $('.modal-clear-list-products').toggleClass('is-open-modal');
   });
-
+  $('.clear-list-products-button-no').on("click", function () {
+    $('.modal-clear-list-products').toggleClass('is-open-modal');
+  });
+  $('.clear-list-products-button-yes').on("click", function () {
+    $('.list-products-block').text('');
+    $('.modal-clear-list-products').toggleClass('is-open-modal');
+  }); 
+  // Завтра начать с кнопки "Добавить", реализовать добавление продукта "Название" "Количество"
+  bAddProductInList.on("click", function () {
+    let textProduct = $('.add-product-input').val();
+    let textQuantity = $('.add-product-input-quantity').val();
+    if (textProduct === '' || (textProduct === '' && textQuantity === '')) {
+      return false;
+    }
+    else {
+      let htmlNameProduct = "<span class='name-product'>" + textProduct + "- <span class='name-product-quantity'>" + textQuantity + "</span><span>;</span></span>";
+      $('.list-products-block').append(htmlNameProduct);
+      $('.add-product-input').val('');
+      $('.add-product-input-quantity').val('');
+    }
+  }); 
 });

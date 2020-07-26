@@ -38,7 +38,7 @@
       <ul class="manage-list">
         <li><a href="#" class="manage-link">Добавить категорию</a></li>
         <li><a href="#" class="manage-link">Добавить рецепт</a></li>
-        <li><a href="#" class="manage-link">Добавить список продуктов</a> </li>
+        <li><a href="#" class="manage-link">Добавить список покупок</a> </li>
       </ul>
       <img src="img/search-icon.svg" alt="search" class="search-icon search-visible">
       <div class="search-block animate__animated animate__bounceInDown">
@@ -52,13 +52,13 @@
   <section class="main">
     <div class="container">
       <div class="recipe-main-title">
-        <h2 class="main-title">Список продуктов</h2>
+        <h2 class="main-title">Список покупок</h2>
       </div>
       <!-- /.recipe-main-title -->
       <div class="list-products-wrapper">
         <span class="hint-cross-out-product animate__animated animate__slideInDown">Щелкните на продукты, которые уже купили!</span>  
         <div class="list-products-block">
-          <span class="name-product">Свинина- <span class="name-product-quantity">1 кг</span><span>;</span></span> 
+          <span class="name-product">Свинина - <span class="name-product-quantity">1 кг</span><span>;</span></span> 
           <span class="name-product">Шампиньоны - <span class="name-product-quantity">1 кг</span><span>;</span></span>
           <span class="name-product">Лук репчатый - <span class="name-product-quantity">2 шт</span><span>;</span></span>
           <span class="name-product">Сыр твердый - <span class="name-product-quantity">100 гр</span><span>;</span></span>
@@ -182,6 +182,17 @@
     <!-- /.modal-choose-ingredients -->
   </div>
   <!-- /.modal -->  
+  <div class="modal-clear-list-products animate__animated animate__fadeIn">
+    <div class="modal-dialog-clear-list-products">
+      <h4 class="delete-recipe-heading">Очистить список?</h4>
+      <div class="delete-recipe-buttons">
+        <button class="delete-recipe-button clear-list-products-button-no">Нет</button>  
+        <button class="delete-recipe-button clear-list-products-button-yes">Да</button>  
+      </div>
+    </div>
+    <!-- /.modal-dialog-clear-list-products -->
+  </div>
+  <!-- /.modal-clear-list-products  -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </body>

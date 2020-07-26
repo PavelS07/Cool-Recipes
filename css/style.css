@@ -80,6 +80,7 @@ body {
   padding: 0px;
   margin-top: 16px;
   margin-bottom: 11px;
+  width: 230px;
 }
 
 .manage-list li:not(:last-child) {
@@ -311,7 +312,8 @@ body {
 
 .modal-dialog-search,
 .modal-dialog-ingredients,
-.modal-dialog-delete-recipe {
+.modal-dialog-delete-recipe,
+.modal-dialog-clear-list-products {
   width: 350px;
   background: #FFFFFF;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
@@ -572,7 +574,8 @@ body {
   display: none;
 }
 
-.modal-delete-recipe {
+.modal-delete-recipe,
+.modal-clear-list-products {
   position: fixed;
   left: 0;
   top: 0;
@@ -582,7 +585,8 @@ body {
   display: none;
 }
 
-.modal-dialog-delete-recipe {
+.modal-dialog-delete-recipe,
+.modal-dialog-clear-list-products {
   padding: 0;
 }
 
@@ -601,19 +605,17 @@ body {
   margin-bottom: 20px;
 }
 
-.delete-recipe-button-no {
+.delete-recipe-button-no,
+.clear-list-products-button-no {
   background: #4992FF;
   border: 1px solid #4992FF;
 }
 
-.delete-recipe-button-yes {
+.delete-recipe-button-yes,
+.clear-list-products-button-yes {
   background: #E55A30;
   border: 1px solid #E55A30;
   margin-left: 40px;
-}
-
-.is-open-modal {
-  display: flex;
 }
 
 .list-products-block {
@@ -641,7 +643,8 @@ body {
   display: block;
 }
 
-.cross-out-product-button, .cross-out-success-product-button {
+.cross-out-product-button,
+.cross-out-success-product-button {
   background: #E55A30;
   border: 1px solid #E55A30;
   display: block;
@@ -689,6 +692,10 @@ body {
 }
 
 .is-open-list-products {
+  display: flex;
+}
+
+.is-open-modal {
   display: flex;
 }
 
@@ -1024,7 +1031,8 @@ body {
 
   .modal-dialog-search,
   .modal-dialog-ingredients,
-  .modal-dialog-delete-recipe {
+  .modal-dialog-delete-recipe,
+  .modal-dialog-clear-list-products {
     width: 300px;
   }
 
