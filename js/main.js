@@ -17,6 +17,8 @@ $(document).ready(function () {
   const bCloseModalDeleteRecipe = $('.delete-recipe-button-no');
   const bClearListProducts = $('.clear-product-button');
   const bAddProductInList = $('.add-product-button');
+  const bRegistrAddForm = $('.registr-button-registration');
+  const bSignInAddForm = $('.registr-button-sign-in-up');
   let width = $(window).width();
 
   iconSearch.on("click", function () {
@@ -142,10 +144,22 @@ $(document).ready(function () {
       return false;
     }
     else {
-      let htmlNameProduct = "<span class='name-product'>" + textProduct + "- <span class='name-product-quantity'>" + textQuantity + "</span><span>;</span></span>";
+      let htmlNameProduct = "<span class='name-product'>" + textProduct + " - <span class='name-product-quantity'>" + textQuantity + "</span><span>;</span></span>";
       $('.list-products-block').append(htmlNameProduct);
       $('.add-product-input').val('');
       $('.add-product-input-quantity').val('');
     }
   }); 
+
+  bRegistrAddForm.on("click", function () {
+    $('.registr-row-text-display-none').toggleClass('registr-row-text-display-flex');
+    $('.registr-row-text').toggleClass('registr-row-text-display-none');
+    $('.registr-button-sign-in').toggleClass('registr-row-text-display-none');
+    $('.registr-button-registration').toggleClass('registr-row-text-display-none');
+  });
+  bSignInAddForm.on("click", function () {
+    $('.registr-row-text-display-none').removeClass('registr-row-text-display-none');
+    $('.registr-row-text-display-flex').toggleClass('registr-row-text-display-none');
+    $('.registr-row-text-display-none').toggleClass('registr-row-text-display-flex');
+  });
 });
