@@ -822,6 +822,10 @@ body {
     z-index: 99;
   }
 
+  .manage-list {
+    width: 100%;
+  }
+
   .is-open-mobile-menu {
     display: flex;
   }
