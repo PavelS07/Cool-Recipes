@@ -103,7 +103,10 @@ body {
 
 .search-input,
 .recalculation-input,
-.add-product-input {
+.add-product-input,
+.row-name-input,
+.row-time-input,
+.row-full-desription-input {
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.06em;
@@ -403,7 +406,10 @@ body {
 .recipe-button,
 .recalculation-ingredients-button,
 .delete-recipe-button,
-.add-products-button {
+.add-products-button,
+.row-ingredients-button,
+.delete-image-in-add-recipe-button,
+.add-recipe-button {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
@@ -436,6 +442,7 @@ body {
   width: 636px;
   height: 413px;
   object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
@@ -765,7 +772,7 @@ body {
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  width: 140px; 
+  width: 140px;
 }
 
 .registr-input-text:first-child {
@@ -791,13 +798,15 @@ body {
   opacity: 0.62;
 }
 
-.registr-button-sign-in, .registr-button-sign-in-up {
+.registr-button-sign-in,
+.registr-button-sign-in-up {
   background: #15DAB7;
   border: 1px solid #15DAB7;
   margin-right: 20px;
 }
 
-.registr-button-registration, .registr-button-registration-in-system {
+.registr-button-registration,
+.registr-button-registration-in-system {
   background: #4992FF;
   border: 1px solid #4992FF;
 }
@@ -811,7 +820,7 @@ body {
 }
 
 .registr-button-registration-in-system {
-  width: 120px;
+  width: 125px;
 }
 
 .registr-row-text-display-none {
@@ -820,6 +829,122 @@ body {
 
 .registr-row-text-display-flex {
   display: block;
+}
+
+.row-name-recipe,
+.row-time-recipe {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.row-title-text,
+.row-time-text {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+  margin-right: 20px;
+}
+
+.row-title-text-ingredients {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.row-name-input {
+  border-radius: 3px;
+  margin-right: 5px;
+  width: 150px;
+  height: 30px;
+}
+
+.row-time-input {
+  border-radius: 3px;
+  margin-right: 5px;
+  width: 50px;
+}
+
+.recipe-buttons {
+  margin-bottom: 20px;
+}
+
+.delete-ingredient-in-add-recipe-button {
+  background: #E55A30;
+  border: 1px solid #E55A30;
+  margin-right: 20px;
+}
+
+.add-ingredient-in-add-recipe-button {
+  background: #4992FF;
+  border: 1px solid #4992FF;
+}
+
+.list-ingredients {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-ingredients-text {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.085em;
+  margin-bottom: 5px;
+}
+
+.row-full-desription-input {
+  font-size: 14px;
+  border-radius: 3px;
+  width: 480px;
+  height: 200px;
+}
+
+.add-image-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.add-image-recipe {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.full-image-block-add-recipe {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.full-image-add-recipe {
+  width: 470px;
+  height: 350px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.delete-image-in-add-recipe-button {
+  background: #E55A30;
+  border: 1px solid #E55A30;
+}
+
+.row-choose-desire {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.desire-recipe-checkbox {
+  width: 15px;
+  height: 15px;
+}
+
+.add-recipe-button {
+  background: #4992FF;
+  border: 1px solid #4992FF;
 }
 
 @media (max-width: 1200px) {
@@ -919,6 +1044,11 @@ body {
 
   .row-text {
     font-size: 18px;
+  }
+
+  .full-image-add-recipe {
+    width: 370px;
+    height: 250px;
   }
 }
 
@@ -1102,12 +1232,25 @@ body {
     width: 50%;
     border: none;
     filter: none;
-    /* height: 160px; */
   }
 
   .registr-input-text {
     margin-top: 20px;
     margin-bottom: 0;
+  }
+
+  .row-title-text {
+    font-size: 16px;
+  }
+
+  .row-full-desription-input {
+    width: 100%;
+    height: 40%;
+  }
+
+  .full-image-add-recipe {
+    width: 50%;
+    height: 40%;
   }
 }
 
@@ -1256,5 +1399,39 @@ body {
 
   .registr-button {
     padding: 5px 3px;
+  }
+
+  .row-title-text {
+    flex-basis: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .flex-basis-70-in-add-recipe-mobile {
+    flex-basis: 70%;
+  }
+
+  .row-title-text-none-top {
+    margin-top: 0;
+  }
+
+  .row-name-input {
+    width: 60%;
+    height: 24px;
+  }
+
+  .row-time-input {
+    height: 24px;
+  }
+
+  .row-name-select {
+    width: 110px;
+  }
+
+  .row-ingredients-button,
+  .delete-image-in-add-recipe-button,
+  .add-recipe-button {
+    padding: 3px 6px;
   }
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мясо по-французски</title>
+  <title>Добавление рецепта</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
@@ -52,97 +52,66 @@
   <section class="main">
     <div class="container">
       <div class="recipe-main-title">
-        <h2 class="main-title">Мясо по-французски</h2>
-        <div class="recipe-buttons">
-          <button class="recipe-button edit">Редактировать</button>
-          <button class="recipe-button delete">Удалить</button>
-        </div>
+        <h2 class="main-title">Добавление рецепта</h2>
       </div>
       <!-- /.recipe-main-title -->
-      <div class="pre-description">
-        <div class="pre-description-text">
-          <div class="pre-description-row">
-            <p class="row-text row-text-category">Категория: <span class="row-dynamics-text">жаркое</span></p>
-          </div>
-          <!-- /.pre-description-row -->
-          <div class="pre-description-row">
-            <p class="row-text">Время приготовления: <span class="row-dynamics-text">126 <span>минут</span></span></p>
-          </div>
-          <!-- /.pre-description-row -->
-          <div class="pre-description-row">
-            <p class="row-text">Ингредиенты:</p>
-            <span class="row-dynamics-ingredients-text">Свинина-1кг;</span>
-            <span class="row-dynamics-ingredients-text">Шампиньоны-1кг;</span>
-            <span class="row-dynamics-ingredients-text">Лук репчатый-2шт;</span>
-            <span class="row-dynamics-ingredients-text">Сыр твердый-100грамм;</span>
-            <span class="row-dynamics-ingredients-text">Помидоры красные-2шт;</span>
-            <span class="row-dynamics-ingredients-text">Горчица (готовый соус)-по вкусу;</span>
-            <span class="row-dynamics-ingredients-text">Соль-по вкусу;</span>
-            <span class="row-dynamics-ingredients-text">Перец черный молотый-по вкусу;</span>
-            <span class="row-dynamics-ingredients-text">Масло растительное-для жарки;</span>
-          </div>
-          <!-- /.pre-description-row -->
-        </div>
-        <!-- /.pre-description-text -->
-        <img src="img/catalog/food2.jpeg" alt="" class="pre-description-image">
+      <div class="row-name-recipe">
+        <h5 class="row-title-text row-title-text-none-top">Название</h5>
+        <input type="text" class="row-name-input">
+        <select class="modal-select row-name-select">
+          <option class="modal-select-text row-name-select-text">Категория</option>
+          <option class="modal-select-text row-name-select-text">Фрукты</option>
+          <option class="modal-select-text row-name-select-text">Жаркое</option>
+          <option class="modal-select-text row-name-select-text">Овощи</option>
+          <option class="modal-select-text row-name-select-text">Мороженое</option>
+        </select>
       </div>
-      <!-- /.pre-description -->
-      <div class="recipe-description">
-        <h2 class="main-title">Рецепт</h2>
-        <p class="recipe-text-description">Запеченное в духовке мясо с картофелем под хрустящей сырной корочкой, сытное
-          и легкое в приготовлении блюдо, которое покорит любого мужчину. Pretium cras fermentum diam et, vel, mi. Nibh
-          vitae eget adipiscing hac tristique senectus massa. Tincidunt eget vel ut magna volutpat adipiscing nulla ac.
-          Elit nisl odio at amet. Volutpat donec massa posuere et consectetur orci et sit. Fames amet dolor quam urna
-          turpis praesent pharetra. Aliquet lectus ut mauris diam scelerisque rhoncus curabitur. Etiam adipiscing
-          vulputate faucibus porttitor mi, sapien dui. Aenean sed mattis aliquam maecenas urna, sed nulla. Nisl est
-          libero, enim purus est morbi. Pharetra, feugiat venenatis nisi sodales. Nunc tempus ac dolor euismod gravida
-          scelerisque. Auctor diam sagittis, amet vel ultrices dictumst id mattis nibh. Ut at ridiculus tortor libero.
-        </p>
+      <!-- /.row-name-recipe -->
+      <div class="row-time-recipe">
+        <h5 class="row-title-text">Время приготовления</h5>
+        <input type="text" class="row-time-input">
+        <span class="row-time-text">минут</span>
       </div>
-      <!-- /.recipe-description -->
-      <div class="recalculation-ingredients">
-        <h2 class="main-title">Пересчет ингредиентов</h2>
-        <p class="recalculation-ingredients-paragraph">Введите количество ингредиентов на одну порцию:</p>
-        <div class="recalculation-ingredients-wrapper">
-          <div class="recalculation-row">
-            <span class="recalculation-row-text">Свинина - <span class="ingredint-quantity">12</span></span>
-            <input type="text" class="recalculation-input">
-            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
-          </div>
-          <!-- /.recalculation-row -->
-          <div class="recalculation-row">
-            <span class="recalculation-row-text">Шампиньоны - <span class="ingredint-quantity">12</span></span>
-            <input type="text" class="recalculation-input">
-            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
-          </div>
-          <!-- /.recalculation-row -->
-          <div class="recalculation-row">
-            <span class="recalculation-row-text">Лук репчатый - <span class="ingredint-quantity">12</span></span>
-            <input type="text" class="recalculation-input">
-            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
-          </div>
-          <!-- /.recalculation-row -->
-          <div class="recalculation-row">
-            <span class="recalculation-row-text">Сыр твердый - <span class="ingredint-quantity">12</span></span>
-            <input type="text" class="recalculation-input">
-            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
-          </div>
-          <!-- /.recalculation-row -->
-          <div class="recalculation-row">
-            <span class="recalculation-row-text">Помидоры красные - <span class="ingredint-quantity">12</span></span>
-            <input type="text" class="recalculation-input">
-            <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-recalculation-row-text">
-          </div>
-          <!-- /.recalculation-row -->
+      <!-- /.row-time-recipe -->
+      <div class="row-ingredients">
+        <h5 class="row-title-text row-title-text-ingredients">Ингредиенты</h5>
+        <div class="recipe-buttons row-ingredients-buttons">
+          <button class="row-ingredients-button delete-ingredient-in-add-recipe-button">Убрать</button>
+          <button class="row-ingredients-button add-ingredient-in-add-recipe-button">Добавить</button>
         </div>
-        <!-- /.recalculation-ingredients-wrapper -->
-        <div class="recalculation-ingredients-buttons">
-          <button class="recalculation-ingredients-button minus">Убавить</button>
-          <button class="recalculation-ingredients-button plus">Добавить</button>
-          <button class="recalculation-ingredients-button calculate-ingredients">Пересчитать</button>
+        <div class="list-ingredients">
+          <span class="list-ingredients-text">Свинина-1кг;</span>
+          <span class="list-ingredients-text">Шампиньоны-1кг;</span>
+          <span class="list-ingredients-text">Лук репчатый-2шт;</span>
+          <span class="list-ingredients-text">Сыр твердый-100 грамм;</span>
+          <span class="list-ingredients-text">Помидоры красные-2шт;</span>
+          <span class="list-ingredients-text">Горчица (готовый соус)-по вкусу;</span>
+        </div>
+        <!-- /.list-ingredients -->
+      </div>
+      <!-- /.row-ingredients -->
+      <div class="row-full-description">
+        <h5 class="row-title-text">Рецепт</h5>
+        <textarea cols="30" rows="10" class="row-full-desription-input"></textarea>
+      </div>
+      <!-- /.row-full-description -->
+      <div class="row-add-image-recipe">
+        <div class="add-image-block">
+          <h5 class="row-title-text flex-basis-70-in-add-recipe-mobile">Добавить картинку</h5>
+          <img src="img/add-image-recipe.svg" alt="" class="add-image-recipe">
+        </div>
+        <div class="full-image-block-add-recipe">
+          <img src="img/catalog/food2.jpeg" alt="" class="full-image-add-recipe">
+          <button class="delete-image-in-add-recipe-button">Удалить</button>
         </div>
       </div>
-      <!-- /.recalculation-ingredients -->
+      <!-- /.row-add-image-recipe -->
+      <div class="row-choose-desire">
+        <h5 class="row-title-text flex-basis-70-in-add-recipe-mobile">Пометить желаемым</h5>
+        <input type="checkbox" class="desire-recipe-checkbox">
+      </div>
+      <!-- /.row-choose-desire -->
+      <button class="add-recipe-button">Добавить рецепт</button>
     </div>
     <!-- /.container -->
   </section>
@@ -265,8 +234,8 @@
     <div class="modal-dialog-delete-recipe">
       <h4 class="delete-recipe-heading">Удалить рецепт ”Мясо по французски”?</h4>
       <div class="delete-recipe-buttons">
-        <button class="delete-recipe-button delete-recipe-button-no">Нет</button>  
-        <button class="delete-recipe-button delete-recipe-button-yes">Да</button>  
+        <button class="delete-recipe-button delete-recipe-button-no">Нет</button>
+        <button class="delete-recipe-button delete-recipe-button-yes">Да</button>
       </div>
     </div>
     <!-- /.modal-dialog-delete-recipe -->
