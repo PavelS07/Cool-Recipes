@@ -23,6 +23,10 @@ $(document).ready(function () {
   const bAddIngredientInAddRecipe = $('.add-ingredient-in-add-recipe-button');
   const bCloseModalAddIngredientInAddRecipe = $('.modal-close-add-ingredients-in-add-recipe');
   const bDeleteImageRecipe = $('.delete-image-in-add-recipe-button'); 
+  const bAddCategory = $('.manage-link-add-category');
+  const bCloseModalAddCategory = $('.modal-close-add-category');
+  const bViewCategory = $('.my-category');
+  const bCloseModalViewCategory = $('.modal-close-view-category');
 
   let width = $(window).width();
 
@@ -44,6 +48,21 @@ $(document).ready(function () {
       iconSearch.toggleClass('search-visible');
       blockSearch.removeClass('search-visible');
     }
+  });
+
+  randomHelpTextInAddCategory();
+  
+  bAddCategory.on("click", function () {
+    $('.modal-add-category').toggleClass('is-open-modal');
+  });
+  bCloseModalAddCategory.on("click", function () {
+    $('.modal-add-category').toggleClass('is-open-modal');
+  });
+  bViewCategory.on("click", function () {
+    $('.modal-view-category').toggleClass('is-open-modal');
+  });
+  bCloseModalViewCategory.on("click", function () {
+    $('.modal-view-category').toggleClass('is-open-modal');
   });
 
   // Скрываем меню при нажатии на любую ссылку в версиях шириной <=768 ВОЗМОЖЕН РЕФАКТОРИНГ
@@ -199,4 +218,16 @@ $(document).ready(function () {
   $('.pre-description-row').delegate('.row-dynamics-ingredients-text-pre-add-in-shop-list', 'click', function () {
     $(this).toggleClass('row-dynamics-ingredients-text-active-add-in-shop-list');
   });
+
+  function randomHelpTextInAddCategory() {
+    let listWords = ['Выпечка', 'Гарниры', 'Жаркое', 'Десерты', 'Овощное', 'Завтрак'];
+    let word = listWords[getRandomInt(0, 6)];
+    $('.add-category-help-text').text(word);
+  }
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+  }
 });

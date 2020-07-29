@@ -18,7 +18,7 @@
     <div class="main-header animate__animated">
       <img src="img/Cool Recipes.png" alt="" class="site-name">
       <nav class="navigation">
-        <a href="#" class="navigation-link animate__animated animate__lightSpeedInRight">Мои категории <span><img src="img/nav-link-1.svg" alt=""
+        <a href="#" class="navigation-link my-category animate__animated animate__lightSpeedInRight">Мои категории <span><img src="img/nav-link-1.svg" alt=""
               class="nav-link-icon"></span></a>
         <a href="#" class="navigation-link animate__animated animate__lightSpeedInLeft">Мои рецепты <span><img src="img/nav-link-2.svg" alt=""
               class="nav-link-icon"></span></a>
@@ -36,7 +36,7 @@
       <p class="user-name">Дарья <span><img src="img/noto_face-savoring-food.svg" alt="" class="user-name-icon"></span>
       </p>
       <ul class="manage-list">
-        <li><a href="#" class="manage-link">Добавить категорию</a></li>
+        <li><a href="#" class="manage-link manage-link-add-category">Добавить категорию</a></li>
         <li><a href="add-recipe.html" class="manage-link">Добавить рецепт</a></li>
         <li><a href="#" class="manage-link">Добавить список покупок</a> </li>
       </ul>
@@ -267,6 +267,43 @@
     <!-- /.modal-choose-ingredients -->
   </div>
   <!-- /.modal -->
+  <div class="modal-add-category animate__animated animate__fadeIn">
+    <div class="modal-dialog-category">
+      <img src="img/close.svg" alt="" class="modal-close-add-category">
+      <p class="add-category-heading">Введите название категории</p>
+      <span class="add-category-help">Например: <span class="add-category-help-text"></span></span>
+      <!-- /.add-category-heading -->
+      <div class="add-category-input-content">
+        <div class="add-category-inputs">
+          <input type="text" class="add-category-input" placeholder="Название">
+          <button class="add-category-button">Добавить</button>
+        </div>
+        <!-- /.add-category-inputs -->
+      </div>
+      <!-- /.add-category-input-content -->
+    </div>
+    <!-- /.modal-dialog-category -->
+  </div>
+  <!-- /.modal-add-category -->
+  <div class="modal-view-category animate__animated animate__fadeIn">
+    <div class="modal-dialog-view-category">
+      <img src="img/close.svg" alt="" class="modal-close-view-category">
+      <a href="#" class="view-category-heading">Выпечка</a>
+      <a href="#" class="view-category-heading">Гарниры</a>
+      <a href="#" class="view-category-heading">Горячее</a>
+      <a href="#" class="view-category-heading">Десерты</a>
+      <a href="#" class="view-category-heading">Овощное</a>
+      <a href="#" class="view-category-heading">Овощное</a>
+      <a href="#" class="view-category-heading">Овощное</a>
+      <a href="#" class="view-category-heading">Овощное</a>
+      <a href="#" class="view-category-heading">Овощное</a>
+      <a href="#" class="view-category-heading">Овощное</a>
+      <a href="#" class="view-category-heading">Овощное</a>
+      <!-- /.view-category-heading -->
+    </div>
+    <!-- /.modal-dialog-view-category -->
+  </div>
+  <!-- /.modal-view-category -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </body>
