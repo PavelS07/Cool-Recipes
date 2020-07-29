@@ -903,6 +903,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .add-image-recipe {
@@ -935,6 +936,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .desire-recipe-checkbox {
@@ -1408,8 +1410,12 @@ body {
     margin-top: 15px;
   }
 
-  .flex-basis-70-in-add-recipe-mobile {
-    flex-basis: 64%;
+  .title-text-add-image {
+    flex-basis: 58%;
+  }
+
+  .title-text-desire {
+    flex-basis: 65%;
   }
 
   .row-title-text-none-top {
