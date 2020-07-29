@@ -402,6 +402,10 @@ body {
   margin-bottom: 10px;
 }
 
+.modal-close-view-category {
+  position: sticky;
+  left: 98%;
+}
 
 .mobile-hide {
   display: none;

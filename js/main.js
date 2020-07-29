@@ -51,7 +51,7 @@ $(document).ready(function () {
   });
 
   randomHelpTextInAddCategory();
-  
+
   bAddCategory.on("click", function () {
     $('.modal-add-category').toggleClass('is-open-modal');
   });
@@ -60,9 +60,11 @@ $(document).ready(function () {
   });
   bViewCategory.on("click", function () {
     $('.modal-view-category').toggleClass('is-open-modal');
+    $('body').toggleClass('no-scroll');
   });
   bCloseModalViewCategory.on("click", function () {
     $('.modal-view-category').toggleClass('is-open-modal');
+    $('body').toggleClass('no-scroll');
   });
 
   // Скрываем меню при нажатии на любую ссылку в версиях шириной <=768 ВОЗМОЖЕН РЕФАКТОРИНГ
