@@ -143,7 +143,8 @@ body {
 
 .close,
 .modal-close,
-.modal-close-add-ingredients {
+.modal-close-add-ingredients,
+.modal-close-add-ingredients-in-add-recipe {
   width: 15px;
   cursor: pointer;
 }
@@ -316,7 +317,8 @@ body {
 .modal-dialog-search,
 .modal-dialog-ingredients,
 .modal-dialog-delete-recipe,
-.modal-dialog-clear-list-products {
+.modal-dialog-clear-list-products,
+.modal-dialog-ingredients-in-add-recipe {
   width: 350px;
   background: #FFFFFF;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
@@ -380,7 +382,8 @@ body {
 }
 
 .modal-close,
-.modal-close-add-ingredients {
+.modal-close-add-ingredients,
+.modal-close-add-ingredients-in-add-recipe {
   position: relative;
   top: 0px;
   right: -98%;
@@ -409,7 +412,8 @@ body {
 .add-products-button,
 .row-ingredients-button,
 .delete-image-in-add-recipe-button,
-.add-recipe-button {
+.add-recipe-button,
+.add-product-in-list-shop {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
@@ -465,6 +469,23 @@ body {
   margin-bottom: 10px;
 }
 
+.row-dynamics-ingredients-text-pre-add-in-shop-list {
+  font-weight: 700;
+  opacity: 30%;
+  cursor: pointer;
+}
+
+.row-dynamics-ingredients-text-active-add-in-shop-list {
+  font-weight: 700;
+  opacity: 100%;
+  color: #7FEFC7;
+}
+
+.add-product-in-list-shop {
+  background: #4992FF;
+  border: 1px solid #4992FF;
+}
+
 .recipe-description {
   margin-bottom: 30px;
 }
@@ -508,7 +529,8 @@ body {
   height: 26px;
 }
 
-.delete-ingredient-in-recalculation-row-text {
+.delete-ingredient-in-recalculation-row-text,
+.delete-ingredient-in-add-recipe {
   width: 15px;
   height: 10px;
   cursor: pointer;
@@ -536,7 +558,8 @@ body {
   margin-left: 20px;
 }
 
-.modal-add-ingredients {
+.modal-add-ingredients,
+.modal-add-ingredients-in-add-recipe {
   position: fixed;
   left: 0;
   top: 0;
@@ -699,10 +722,6 @@ body {
 }
 
 .is-open-list-products {
-  display: flex;
-}
-
-.is-open-modal {
   display: flex;
 }
 
@@ -906,13 +925,6 @@ body {
   flex-wrap: wrap;
 }
 
-.add-image-recipe {
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  vertical-align: middle;
-}
-
 .full-image-block-add-recipe {
   display: flex;
   align-items: flex-end;
@@ -949,6 +961,22 @@ body {
 .add-recipe-button {
   background: #4992FF;
   border: 1px solid #4992FF;
+}
+
+.is-open-modal {
+  display: flex;
+}
+
+.add-image-recipe-button {
+  background-image: url(../img/add-image-recipe.svg);
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
 }
 
 @media (max-width: 1200px) {
@@ -1185,7 +1213,6 @@ body {
 
   .add-ingredients-heading {
     font-size: 14px;
-    letter-spacing: 0.085em;
   }
 
   .add-products-block {
@@ -1346,7 +1373,8 @@ body {
   .modal-dialog-search,
   .modal-dialog-ingredients,
   .modal-dialog-delete-recipe,
-  .modal-dialog-clear-list-products {
+  .modal-dialog-clear-list-products,
+  .modal-dialog-ingredients-in-add-recipe {
     width: 300px;
   }
 
@@ -1412,11 +1440,13 @@ body {
     margin-top: 15px;
   }
 
-  .add-image-block-mobile, .row-choose-desire-mobile {
+  .add-image-block-mobile,
+  .row-choose-desire-mobile {
     display: inline-block;
   }
 
-  .title-text-add-image, .title-text-desire {
+  .title-text-add-image,
+  .title-text-desire {
     display: inline-block;
   }
 

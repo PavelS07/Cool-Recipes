@@ -19,6 +19,11 @@ $(document).ready(function () {
   const bAddProductInList = $('.add-product-button');
   const bRegistrAddForm = $('.registr-button-registration');
   const bSignInAddForm = $('.registr-button-sign-in-up');
+  const bDeleteIngredientInAddRecipe = $('.delete-ingredient-in-add-recipe-button');
+  const bAddIngredientInAddRecipe = $('.add-ingredient-in-add-recipe-button');
+  const bCloseModalAddIngredientInAddRecipe = $('.modal-close-add-ingredients-in-add-recipe');
+  const bDeleteImageRecipe = $('.delete-image-in-add-recipe-button'); 
+
   let width = $(window).width();
 
   iconSearch.on("click", function () {
@@ -161,5 +166,37 @@ $(document).ready(function () {
     $('.registr-row-text-display-none').removeClass('registr-row-text-display-none');
     $('.registr-row-text-display-flex').toggleClass('registr-row-text-display-none');
     $('.registr-row-text-display-none').toggleClass('registr-row-text-display-flex');
+  });
+  bDeleteIngredientInAddRecipe.on("click", function () {
+    $('.delete-ingredient-in-add-recipe').toggleClass('is-visible-delete-ingredient-in-recalculation-row-text');
+  });
+  $('.list-ingredients-text').delegate('.delete-ingredient-in-add-recipe', 'click', function () {
+    $(this).parent('.list-ingredients-text').hide();
+  });
+  bAddIngredientInAddRecipe.on("click", function () {
+    $('.modal-add-ingredients-in-add-recipe').toggleClass('is-open-modal');
+  });
+  bCloseModalAddIngredientInAddRecipe.on("click", function () {
+    $('.modal-add-ingredients-in-add-recipe').toggleClass('is-open-modal');
+  });
+  bDeleteImageRecipe.on("click", function () {
+    $('.modal-delete-recipe').toggleClass('is-open-modal');
+  });
+  $('.pre-description-row').delegate('.add-product-in-list-shop', 'click', function () {
+    $(this).text('Готово');
+    $(this).toggleClass('add-product-in-list-shop-success');
+    $('.row-dynamics-ingredients-text').toggleClass('row-dynamics-ingredients-text-pre-add-in-shop-list');
+    // Меняем кнопку на "Готово"
+  });
+
+  $('.pre-description-row').delegate('.add-product-in-list-shop-success', 'click', function () {
+    $(this).removeClass('cross-out-success-product-button');
+    $(this).text('Добавить в список покупок');
+    $('.row-dynamics-ingredients-text').removeClass('row-dynamics-ingredients-text-pre-add-in-shop-list');
+    $('.row-dynamics-ingredients-text').removeClass('row-dynamics-ingredients-text-active-add-in-shop-list');
+    // Меняем кнопку на "Добавить в список покупок"
+  });
+  $('.pre-description-row').delegate('.row-dynamics-ingredients-text-pre-add-in-shop-list', 'click', function () {
+    $(this).toggleClass('row-dynamics-ingredients-text-active-add-in-shop-list');
   });
 });

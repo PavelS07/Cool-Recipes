@@ -80,12 +80,12 @@
           <button class="row-ingredients-button add-ingredient-in-add-recipe-button">Добавить</button>
         </div>
         <div class="list-ingredients">
-          <span class="list-ingredients-text">Свинина-1кг;</span>
-          <span class="list-ingredients-text">Шампиньоны-1кг;</span>
-          <span class="list-ingredients-text">Лук репчатый-2шт;</span>
-          <span class="list-ingredients-text">Сыр твердый-100 грамм;</span>
-          <span class="list-ingredients-text">Помидоры красные-2шт;</span>
-          <span class="list-ingredients-text">Горчица (готовый соус)-по вкусу;</span>
+          <span class="list-ingredients-text">Свинина-1кг; <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-add-recipe"></span>
+          <span class="list-ingredients-text">Шампиньоны-1кг; <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-add-recipe"></span>
+          <span class="list-ingredients-text">Лук репчатый-2шт; <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-add-recipe"></span>
+          <span class="list-ingredients-text">Сыр твердый-100 грамм; <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-add-recipe"></span>
+          <span class="list-ingredients-text">Помидоры красные-2шт; <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-add-recipe"></span>
+          <span class="list-ingredients-text">Горчица (готовый соус)-по вкусу; <img src="img/close.svg" alt="" class="animate__animated animate__flipInX delete-ingredient-in-add-recipe"></span>
         </div>
         <!-- /.list-ingredients -->
       </div>
@@ -98,7 +98,7 @@
       <div class="row-add-image-recipe">
         <div class="add-image-block add-image-block-mobile">
           <h5 class="row-title-text title-text-add-image">Добавить картинку</h5>
-          <img src="img/add-image-recipe.svg" alt="" class="add-image-recipe">
+          <button class="add-image-recipe-button"></button>
         </div>
         <div class="full-image-block-add-recipe">
           <img src="img/catalog/food2.jpeg" alt="" class="full-image-add-recipe">
@@ -211,9 +211,9 @@
     <!-- /.modal-choose-ingredients -->
   </div>
   <!-- /.modal -->
-  <div class="modal-add-ingredients animate__animated animate__fadeIn">
-    <div class="modal-dialog-ingredients">
-      <img src="img/close.svg" alt="" class="modal-close-add-ingredients">
+  <div class="modal-add-ingredients-in-add-recipe animate__animated animate__fadeIn">
+    <div class="modal-dialog-ingredients-in-add-recipe">
+      <img src="img/close.svg" alt="" class="modal-close-add-ingredients-in-add-recipe">
       <p class="add-ingredients-heading">Укажите название ингредиентов и их массу (количество)</p>
       <!-- /.add-ingredients-heading -->
       <div class="add-ingredient-input-content">
@@ -227,15 +227,15 @@
       <!-- /.add-ingredient-input-content -->
       <button class="search-button search search-button-modal button-center add-ingredints-button">Готово</button>
     </div>
-    <!-- /.modal-dialog-ingredients -->
+    <!-- /.modal-dialog-ingredients-in-add-recipe -->
   </div>
-  <!-- /.modal-add-ingredients -->
+  <!-- /.modal-add-ingredients-in-add-recipe -->
   <div class="modal-delete-recipe animate__animated animate__fadeIn">
     <div class="modal-dialog-delete-recipe">
-      <h4 class="delete-recipe-heading">Удалить рецепт ”Мясо по французски”?</h4>
+      <h4 class="delete-recipe-heading">Удалить изображение?</h4>
       <div class="delete-recipe-buttons">
-        <button class="delete-recipe-button delete-recipe-button-no">Нет</button>
-        <button class="delete-recipe-button delete-recipe-button-yes">Да</button>
+        <button class="delete-recipe-button delete-recipe-button-no delete-recipe-image-button-no">Нет</button>
+        <button class="delete-recipe-button delete-recipe-button-yes delete-recipe-image-button-yes">Да</button>
       </div>
     </div>
     <!-- /.modal-dialog-delete-recipe -->
