@@ -910,6 +910,7 @@ body {
   width: 36px;
   height: 36px;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .full-image-block-add-recipe {
@@ -942,6 +943,7 @@ body {
 .desire-recipe-checkbox {
   width: 15px;
   height: 15px;
+  vertical-align: middle;
 }
 
 .add-recipe-button {
@@ -1410,12 +1412,16 @@ body {
     margin-top: 15px;
   }
 
-  .title-text-add-image {
-    flex-basis: 58%;
+  .add-image-block-mobile, .row-choose-desire-mobile {
+    display: inline-block;
+  }
+
+  .title-text-add-image, .title-text-desire {
+    display: inline-block;
   }
 
   .title-text-desire {
-    flex-basis: 65%;
+    margin-right: 5px;
   }
 
   .row-title-text-none-top {
@@ -1439,5 +1445,9 @@ body {
   .delete-image-in-add-recipe-button,
   .add-recipe-button {
     padding: 3px 6px;
+  }
+
+  .add-recipe-button {
+    display: block;
   }
 }
