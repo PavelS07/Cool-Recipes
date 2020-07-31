@@ -182,6 +182,7 @@ $(document).ready(function () {
     $('.registr-row-text-display-none').toggleClass('registr-row-text-display-flex');
     $('.registr-row-text').toggleClass('registr-row-text-display-none');
     $('.registr-button-sign-in').toggleClass('registr-row-text-display-none');
+    $('.forget-pass').toggleClass('registr-row-text-display-none');
     $('.registr-button-registration').toggleClass('registr-row-text-display-none');
   });
   bSignInAddForm.on("click", function () {

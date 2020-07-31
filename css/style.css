@@ -603,7 +603,7 @@ body {
 
 .view-category-heading {
   display: block;
-  text-align: center; 
+  text-align: center;
   text-decoration: underline;
   font-size: 16px;
   line-height: 19px;
@@ -869,7 +869,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .registr-button {
@@ -906,6 +906,15 @@ body {
 
 .registr-button-registration-in-system {
   width: 125px;
+}
+
+.forget-pass {
+  display: block;
+  text-align: center; 
+  font-size: 16px;
+  line-height: 19px;
+  color: #4992FF;
+  margin-bottom: 20px;
 }
 
 .registr-row-text-display-none {
@@ -1499,6 +1508,10 @@ body {
 
   .registr-button {
     padding: 5px 3px;
+  }
+
+  .forget-pass { 
+    font-size: 14px;
   }
 
   .row-title-text {
