@@ -71,6 +71,7 @@ $(document).ready(function () {
   if (width <=768) {
     $('.navigation-link').on("click", function () {
       $('.main-header').toggleClass('is-open-mobile-menu');
+      $('body').toggleClass('no-scroll');
     });
   }
   // Скрываем меню при нажатии на любую ссылку в версиях шириной <=768
