@@ -130,7 +130,7 @@ body {
 .search-button.search {
   background: #15DAB7;
   border: 1px solid #15DAB7;
-  border-radius: 0px 2px 2px 0px;
+  border-radius: 2px;
   margin-right: 10px;
 }
 
