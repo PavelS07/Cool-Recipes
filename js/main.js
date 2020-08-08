@@ -22,7 +22,7 @@ $(document).ready(function () {
   const bDeleteIngredientInAddRecipe = $('.delete-ingredient-in-add-recipe-button');
   const bAddIngredientInAddRecipe = $('.add-ingredient-in-add-recipe-button');
   const bCloseModalAddIngredientInAddRecipe = $('.modal-close-add-ingredients-in-add-recipe');
-  const bDeleteImageRecipe = $('.delete-image-in-add-recipe-button'); 
+  const bDeleteImageRecipe = $('.delete-image-in-add-recipe-button');
   const bAddCategory = $('.manage-link-add-category');
   const bCloseModalAddCategory = $('.modal-close-add-category');
   const bViewCategory = $('.my-category');
@@ -68,7 +68,7 @@ $(document).ready(function () {
   });
 
   // Скрываем меню при нажатии на любую ссылку в версиях шириной <=768 ВОЗМОЖЕН РЕФАКТОРИНГ
-  if (width <=768) {
+  if (width <= 768) {
     $('.navigation-link').on("click", function () {
       $('.main-header').toggleClass('is-open-mobile-menu');
       $('body').toggleClass('no-scroll');
@@ -162,21 +162,49 @@ $(document).ready(function () {
   $('.clear-list-products-button-yes').on("click", function () {
     $('.list-products-block').text('');
     $('.modal-clear-list-products').toggleClass('is-open-modal');
-  }); 
+  });
   // Завтра начать с кнопки "Добавить", реализовать добавление продукта "Название" "Количество"
   bAddProductInList.on("click", function () {
     let textProduct = $('.add-product-input').val();
     let textQuantity = $('.add-product-input-quantity').val();
     if (textProduct === '' || (textProduct === '' && textQuantity === '')) {
       return false;
-    }
-    else {
+    } else {
       let htmlNameProduct = "<span class='name-product'>" + textProduct + " - <span class='name-product-quantity'>" + textQuantity + "</span><span>;</span></span>";
       $('.list-products-block').append(htmlNameProduct);
       $('.add-product-input').val('');
       $('.add-product-input-quantity').val('');
     }
-  }); 
+  });
+
+  // Add-price-product
+
+  $('.list-products-block').delegate('.add-price-product-text', 'click', function () {
+    $(this).toggleClass('add-price-display-none');
+    $(this).siblings('.add-price-product').toggleClass('add-price-display-none');
+    $(this).siblings('.add-price-button').toggleClass('add-price-display-none');
+  });
+
+  let counterPriceProduct = 0;
+
+  $('.list-products-block').delegate('.add-price-button', 'click', function () {
+    $(this).toggleClass('add-price-display-none');
+    $(this).siblings('.add-price-product-text').toggleClass('add-price-display-none');
+
+    if ($(this).siblings('.add-price-product').val() !== '') {
+      let priceFromInput = parseInt($(this).siblings('.add-price-product').val());
+
+      counterPriceProduct += priceFromInput;
+      $(this).siblings('.add-price-product-text').text(priceFromInput);
+      $(this).siblings('.add-price-product-text').addClass('price-product');
+      $(this).siblings('.add-price-product-text').removeClass('add-price-product-text');
+
+      $('.total-price').text(counterPriceProduct + ' руб.');
+    }
+    $(this).siblings('.add-price-product').toggleClass('add-price-display-none');
+  });
+
+  // Add-price-product
 
   bRegistrAddForm.on("click", function () {
     $('.registr-row-text-display-none').toggleClass('registr-row-text-display-flex');
@@ -232,6 +260,6 @@ $(document).ready(function () {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 });

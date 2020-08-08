@@ -106,7 +106,8 @@ body {
 .add-product-input,
 .row-name-input,
 .row-time-input,
-.row-full-desription-input {
+.row-full-desription-input,
+.add-price-product {
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.06em;
@@ -430,7 +431,8 @@ body {
 .delete-image-in-add-recipe-button,
 .add-recipe-button,
 .add-product-in-list-shop,
-.add-category-button {
+.add-category-button,
+.add-price-button {
   font-size: 16px;
   line-height: 21px;
   color: #FFFFFF;
@@ -723,6 +725,40 @@ body {
   margin-bottom: 10px;
 }
 
+.add-price-product-text,
+.price-product {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.085em;
+  text-decoration-line: underline;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  margin-left: 10px;
+}
+.price-product {
+  text-decoration-line: none;
+}
+
+.add-price-product {
+  border-radius: 3px;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.add-price-button {
+  background: #15DAB7;
+  border: 1px solid #15DAB7;
+  display: inline;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.add-price-display-none {
+  display: none;
+}
+
 .add-products-block {
   display: flex;
   align-items: center;
@@ -910,7 +946,7 @@ body {
 
 .forget-pass {
   display: block;
-  text-align: center; 
+  text-align: center;
   font-size: 16px;
   line-height: 19px;
   color: #4992FF;
@@ -1256,7 +1292,8 @@ body {
 
   .recipe-button,
   .recalculation-ingredients-button,
-  .add-products-button {
+  .add-products-button,
+  .add-price-button {
     font-size: 14px;
   }
 
@@ -1465,7 +1502,8 @@ body {
 
   .recipe-button,
   .recalculation-ingredients-button,
-  .add-products-button {
+  .add-products-button,
+  .add-price-button {
     padding: 5px;
     font-size: 12px;
   }
@@ -1510,7 +1548,7 @@ body {
     padding: 5px 3px;
   }
 
-  .forget-pass { 
+  .forget-pass {
     font-size: 14px;
   }
 
