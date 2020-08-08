@@ -1366,8 +1366,7 @@ body {
   }
 
   .add-price-button {
-    padding: 0;
-    height: 30px;
+    padding: 2px 4px;
   }
 
   .main-dialog-registr {
@@ -1529,8 +1528,7 @@ body {
 
   .recipe-button,
   .recalculation-ingredients-button,
-  .add-products-button,
-  .add-price-button {
+  .add-products-button {
     padding: 5px;
     font-size: 12px;
   }
