@@ -720,9 +720,15 @@ body {
   margin-bottom: 25px;
 }
 
-.name-product {
-  display: block;
+.shop-row {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
+}
+
+.counter-block {
+  display: flex;
+  align-items: center;
 }
 
 .add-price-product-text,
@@ -735,6 +741,7 @@ body {
   cursor: pointer;
   margin-left: 10px;
 }
+
 .price-product {
   text-decoration-line: none;
 }
@@ -748,10 +755,8 @@ body {
 .add-price-button {
   background: #15DAB7;
   border: 1px solid #15DAB7;
-  display: inline;
   padding-top: 1px;
   padding-bottom: 1px;
-  vertical-align: middle;
   margin-left: 5px;
 }
 
@@ -815,6 +820,10 @@ body {
   opacity: 30%;
   font-weight: 700;
   cursor: pointer;
+}
+
+.add-price-cross-display-none {
+  display: none;
 }
 
 .cross-out-product {
@@ -1341,6 +1350,24 @@ body {
 
   .add-product-button {
     order: 1;
+  }
+
+  .shop-row {
+    display: block;
+  }
+
+  .name-product {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .counter-block {
+    margin-bottom: 5px;
+  }
+
+  .add-price-button {
+    padding: 0;
+    height: 30px;
   }
 
   .main-dialog-registr {

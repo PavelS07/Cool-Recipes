@@ -138,6 +138,7 @@ $(document).ready(function () {
     // $(this).parent('.recalculation-row').hide();
     $('.hint-cross-out-product').toggleClass('is-open-list-products');
     $('.name-product').toggleClass('pre-cross-out-product');
+    $('.counter-block').toggleClass('add-price-display-none');
     // Меняем кнопку на "Готово"
   });
 
@@ -147,11 +148,13 @@ $(document).ready(function () {
     $(this).toggleClass('cross-out-product-button');
     $('.hint-cross-out-product').toggleClass('is-open-list-products');
     $('.name-product').toggleClass('pre-cross-out-product');
+    $('.counter-block').toggleClass('add-price-display-none');
     // Меняем кнопку на "Зачеркивание"
   });
 
   $('.list-products-block').delegate('.pre-cross-out-product', 'click', function () {
     $(this).toggleClass('cross-out-product');
+    $(this).siblings('.counter-block').toggleClass('add-price-cross-display-none');
   });
   bClearListProducts.on("click", function () {
     $('.modal-clear-list-products').toggleClass('is-open-modal');
@@ -163,14 +166,14 @@ $(document).ready(function () {
     $('.list-products-block').text('');
     $('.modal-clear-list-products').toggleClass('is-open-modal');
   });
-  // Завтра начать с кнопки "Добавить", реализовать добавление продукта "Название" "Количество"
+
   bAddProductInList.on("click", function () {
     let textProduct = $('.add-product-input').val();
     let textQuantity = $('.add-product-input-quantity').val();
     if (textProduct === '' || (textProduct === '' && textQuantity === '')) {
       return false;
     } else {
-      let htmlNameProduct = "<span class='name-product'>" + textProduct + " - <span class='name-product-quantity'>" + textQuantity + "</span><span>;</span></span>";
+      let htmlNameProduct = "<div class='shop-row'><span class='name-product'>" + textProduct + "- <span class='name-product-quantity'>" + textQuantity + "</span><span>;</span></span><span class='counter-block'><span class='add-price-product-text'>Указать цену</span><input type='number' class='add-price-product add-price-display-none' placeholder='Цена'><button class='add-price-button add-price-display-none'>Ок</button></span></div>";
       $('.list-products-block').append(htmlNameProduct);
       $('.add-product-input').val('');
       $('.add-product-input-quantity').val('');
@@ -195,7 +198,7 @@ $(document).ready(function () {
       let priceFromInput = parseInt($(this).siblings('.add-price-product').val());
 
       counterPriceProduct += priceFromInput;
-      $(this).siblings('.add-price-product-text').text(priceFromInput);
+      $(this).siblings('.add-price-product-text').text(priceFromInput + ' руб.');
       $(this).siblings('.add-price-product-text').addClass('price-product');
       $(this).siblings('.add-price-product-text').removeClass('add-price-product-text');
 
