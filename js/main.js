@@ -29,6 +29,7 @@ $(document).ready(function () {
   const bCloseModalViewCategory = $('.modal-close-view-category');
 
   let width = $(window).width();
+  let counterPriceProduct = 0;
 
   iconSearch.on("click", function () {
     if (width <= 576) {
@@ -165,6 +166,8 @@ $(document).ready(function () {
   $('.clear-list-products-button-yes').on("click", function () {
     $('.list-products-block').text('');
     $('.modal-clear-list-products').toggleClass('is-open-modal');
+    counterPriceProduct = 0;
+    $('.total-price').text('0 руб.');
   });
 
   bAddProductInList.on("click", function () {
@@ -188,21 +191,19 @@ $(document).ready(function () {
     $(this).siblings('.add-price-button').toggleClass('add-price-display-none');
   });
 
-  let counterPriceProduct = 0;
-
   $('.list-products-block').delegate('.add-price-button', 'click', function () {
     $(this).toggleClass('add-price-display-none');
     $(this).siblings('.add-price-product-text').toggleClass('add-price-display-none');
 
     if ($(this).siblings('.add-price-product').val() !== '') {
-      let priceFromInput = parseInt($(this).siblings('.add-price-product').val());
+      let priceFromInput = parseFloat($(this).siblings('.add-price-product').val());
 
       counterPriceProduct += priceFromInput;
       $(this).siblings('.add-price-product-text').text(priceFromInput + ' руб.');
       $(this).siblings('.add-price-product-text').addClass('price-product');
       $(this).siblings('.add-price-product-text').removeClass('add-price-product-text');
 
-      $('.total-price').text(counterPriceProduct + ' руб.');
+      $('.total-price').text(counterPriceProduct.toFixed(3) + ' руб.');
     }
     $(this).siblings('.add-price-product').toggleClass('add-price-display-none');
   });
